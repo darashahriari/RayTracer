@@ -1,0 +1,13 @@
+ Features:
+  -Sampling: I sampled by casting multiple rays and averaging the color value per pixel. jitter applies a random offset to the location of each ray within the pixel.
+  -Reflection: I  modled my relfection function after the one that dealt with shadows, limiting the number of recursive reflections to 2. The reflective property can be assigned to a material by adding glazed=“true” in an xml file.
+  -Area Lights: I made area lights a combination of point lights that cover a square area determined by size in the xml file. this produces soft, fancy looking shadows, but drastically lengthens runtime as many more light rays have to be accounted for. turn this on by setting light type to “area” and size to the designated width and length of the square area.
+  -bounding box: I added a bounding box to the mesh file by giving it a bounding variable of type box. this box is instantiated  only one time as soon as the mesh file is parsed. we then test for intersection with the box before even attmpting with the mesh, only moving forward if box intersects.
+
+ 
+
+REFLECTION DEMO: this png demonstrates my reflection ability
+
+AREA LIGHTS DEMO: demonstrates the soft shadows from two different light sources
+
+NOVEL SCENE: this is my novel scene it takes a long time to render due to reflections and area lights. Notice soft shadows and recursive reflections between the plane and the sphere. also demonstrates my ability to add reflections to meshes.
