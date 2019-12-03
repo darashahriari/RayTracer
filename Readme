@@ -1,13 +1,16 @@
  Features:
-  -Sampling: I sampled by casting multiple rays and averaging the color value per pixel. jitter applies a random offset to the location of each ray within the pixel.
+  -Sampling: I sampled by casting multiple rays and averaging the color value per pixel. Setting jitter="true" in the xml applies a random offset to the location of each ray within the pixel.
+  
   -Reflection: I  modled my relfection function after the one that dealt with shadows, limiting the number of recursive reflections to 2. The reflective property can be assigned to a material by adding glazed=“true” in an xml file.
-  -Area Lights: I made area lights a combination of point lights that cover a square area determined by size in the xml file. this produces soft, fancy looking shadows, but drastically lengthens runtime as many more light rays have to be accounted for. turn this on by setting light type to “area” and size to the designated width and length of the square area.
-  -bounding box: I added a bounding box to the mesh file by giving it a bounding variable of type box. this box is instantiated  only one time as soon as the mesh file is parsed. we then test for intersection with the box before even attmpting with the mesh, only moving forward if box intersects.
+  
+  -Area Lights: I defined area lights as a combination of point lights that cover a square area determined by size in the xml file. These produce soft, fancy looking shadows, but drastically lengthen runtime, as many more light rays have to be accounted for. To turn this on, set light type to “area” and size to the designated width/length of the square area.
+ 
+  -Bounding box: I added a bounding box to the mesh file by giving it a bounding variable of type box. This box is instantiated only one time: as soon as the mesh file is parsed. We then test for intersection with the box before even attmpting with the mesh, only moving forward if box intersects.
 
  
 
-REFLECTION DEMO: this png demonstrates my reflection ability
+REFLECTION DEMO: This demo demonstrates the ability of my tracer to handle recursive reflections.
 
-AREA LIGHTS DEMO: demonstrates the soft shadows from two different light sources
+AREA LIGHTS DEMO: This demo demonstrates soft shadows from two different area light.
 
-NOVEL SCENE: this is my novel scene it takes a long time to render due to reflections and area lights. Notice soft shadows and recursive reflections between the plane and the sphere. also demonstrates my ability to add reflections to meshes.
+NOVEL SCENE: This is my novel scene. It takes a long time to render due to reflections and area lights. Notice soft shadows and recursive reflections between the plane and the sphere. This also demonstrates my ability to add reflections to meshes.
