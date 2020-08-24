@@ -1,7 +1,7 @@
  Features:
   -Sampling: I sampled by casting multiple rays and averaging the color value per pixel. Setting jitter="true" in the xml applies a random offset to the location of each ray within the pixel.
   
-  -Reflection: I  modled my relfection function after the one that dealt with shadows, limiting the number of recursive reflections to 2. The reflective property can be assigned to a material by adding glazed=“true” in an xml file.
+  -Reflection: I  modeled my relfection function after the one that dealt with shadows, limiting the number of recursive reflections to 2. The reflective property can be assigned to a material by adding glazed=“true” in an xml file.
   
   -Area Lights: I defined area lights as a combination of point lights that cover a square area determined by size in the xml file. These produce soft, fancy looking shadows, but drastically lengthen runtime, as many more light rays have to be accounted for. To turn this on, set light type to “area” and size to the designated width/length of the square area.
  
@@ -11,6 +11,6 @@
 
 REFLECTION DEMO: This demo demonstrates the ability of my tracer to handle recursive reflections.
 
-AREA LIGHTS DEMO: This demo demonstrates soft shadows from two different area light.
+AREA LIGHTS DEMO: This demo demonstrates soft shadows from two different area lights.
 
 NOVEL SCENE: This is my novel scene. It takes a long time to render due to reflections and area lights. Notice soft shadows and recursive reflections between the plane and the sphere. This also demonstrates my ability to add reflections to meshes.
