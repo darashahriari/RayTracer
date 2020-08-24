@@ -1,16 +1,17 @@
-![](https://user-images.githubusercontent.com/54319864/91095686-c4068d00-e62a-11ea-83cf-8a953fbf6427.png)
-![](https://user-images.githubusercontent.com/54319864/91095695-c668e700-e62a-11ea-9898-ac1a6f381710.png)
-![NovelScene](https://user-images.githubusercontent.com/54319864/91095701-c963d780-e62a-11ea-99ed-75cd19aa945d.png?raw=true)
- Features:
-  -Sampling: I sampled by casting multiple rays and averaging the color value per pixel. Setting jitter="true" in the xml applies a random offset to the location of each ray within the pixel.
-  
-  -Reflection: I  modeled my relfection function after the one that dealt with shadows, limiting the number of recursive reflections to 2. The reflective property can be assigned to a material by adding glazed=“true” in an xml file.
-  
-  -Area Lights: I defined area lights as a combination of point lights that cover a square area determined by size in the xml file. These produce soft, fancy looking shadows, but drastically lengthen runtime, as many more light rays have to be accounted for. To turn this on, set light type to “area” and size to the designated width/length of the square area.
- 
-  -Bounding box: I added a bounding box to the mesh file by giving it a bounding variable of type box. This box is instantiated only one time: as soon as the mesh file is parsed. We then test for intersection with the box before even attmpting with the mesh, only moving forward if box intersects.
+![Soft Lighting](https://user-images.githubusercontent.com/54319864/91095686-c4068d00-e62a-11ea-83cf-8a953fbf6427.png)
+![Reflections](https://user-images.githubusercontent.com/54319864/91095695-c668e700-e62a-11ea-9898-ac1a6f381710.png)
+![NovelScene](https://user-images.githubusercontent.com/54319864/91095701-c963d780-e62a-11ea-99ed-75cd19aa945d.png)
 
- 
+Features:
+
+-Sampling: I sampled by casting multiple rays and averaging the color value per pixel. Setting jitter="true" in the xml applies a random offset to the location of each ray within the pixel.
+
+-Reflection: I  modeled my relfection function after the one that dealt with shadows, limiting the number of recursive reflections to 2. The reflective property can be assigned to a material by adding glazed=“true” in an xml file.
+
+-Area Lights: I defined area lights as a combination of point lights that cover a square area determined by size in the xml file. These produce soft, fancy looking shadows, but drastically lengthen runtime, as many more light rays have to be accounted for. To turn this on, set light type to “area” and size to the designated width/length of the square area.
+
+-Bounding box: I added a bounding box to the mesh file by giving it a bounding variable of type box. This box is instantiated only one time: as soon as the mesh file is parsed. We then test for intersection with the box before even attmpting with the mesh, only moving forward if box intersects.
+
 
 REFLECTION DEMO: This demo demonstrates the ability of my tracer to handle recursive reflections.
 
