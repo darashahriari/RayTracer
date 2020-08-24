@@ -1,6 +1,6 @@
  https://user-images.githubusercontent.com/54319864/91095686-c4068d00-e62a-11ea-83cf-8a953fbf6427.png
  https://user-images.githubusercontent.com/54319864/91095695-c668e700-e62a-11ea-9898-ac1a6f381710.png
- https://user-images.githubusercontent.com/54319864/91095701-c963d780-e62a-11ea-99ed-75cd19aa945d.png
+ ![Novel Scene](https://user-images.githubusercontent.com/54319864/91095701-c963d780-e62a-11ea-99ed-75cd19aa945d.png)
  Features:
   -Sampling: I sampled by casting multiple rays and averaging the color value per pixel. Setting jitter="true" in the xml applies a random offset to the location of each ray within the pixel.
   
