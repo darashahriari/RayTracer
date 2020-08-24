@@ -14,3 +14,4 @@ REFLECTION DEMO: This demo demonstrates the ability of my tracer to handle recur
 AREA LIGHTS DEMO: This demo demonstrates soft shadows from two different area light.
 
 NOVEL SCENE: This is my novel scene. It takes a long time to render due to reflections and area lights. Notice soft shadows and recursive reflections between the plane and the sphere. This also demonstrates my ability to add reflections to meshes.
+![alt text](https://github.com/darashahriari/RayTracer/blob/master/Renders/NOVEL%20SCENE.png?raw=true)
